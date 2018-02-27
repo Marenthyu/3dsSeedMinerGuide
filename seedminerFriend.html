@@ -64,25 +64,22 @@
     </p>
     <ol>
         <li>Open a command Prompt by typing <code>CMD</code> into the start menu search bar and pressing return</li>
-        <li>In the new black window, type <code>python --version</code>
+        <li>In the new black window, type <code>py -3 --version</code>
             <br/>
             <ul>
-                <li>If it reports <code>Python Version 2.x.x</code>, you have Python 2.</li>
+                <li>If it reports <code>Python Version 2.x.x</code>, you have Python 2 and should install Python 3 instead from <a href="https://www.python.org/downloads/">python.org</a>.</li>
                 <li>If it reports <code>Python Version 3.x.x</code>, you have Python 3.</li>
-                <li>If it complains about an unknown command, try typing <code>C:\Python27\python.exe --version</code>
+                <li>If it complains about an unknown command, you either have Python 2 or no Python.
                     <ul>
-                        <li>If that reports a version, use <code>C:\Python27\python.exe</code> instead of
-                            <code>python</code> from here on out (you have Python 2)
-                        </li>
-                        <li>Else, you do not have python Installed. Go to <a href="https://www.python.org/downloads/">python.org</a>
-                            and download and install any of the most recent python versions, then redo this part to
+                        <li>Go to <a href="https://www.python.org/downloads/">python.org</a>
+                            and download and install the most recent Python 3 version, then redo this part to
                             confirm it worked.
                         </li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li>Type <code>python -m pip install pycryptodomex</code>
+        <li>Type <code>py -3 -mpip install pycryptodomex</code>
             <br/>
             <ul>
                 <li>If it does not give an error, you are good to go.</li>
@@ -104,25 +101,19 @@
             here</a></li>
         <li>Extract the zip file</li>
         <li>Move your <code>movable_part1.sed</code> into the <code>seedminer</code> directory you just extracted, so
-            <code>seedminer_launcher.py</code> and <code>movable_part1.sed</code> are in the same directory.
+            <code>seedminer_launcher3.py</code> and <code>movable_part1.sed</code> are in the same directory.
         </li>
-        <li>Next to the <code>seedminer_launcher.py</code> file, hold SHIFT and right click, then select <code>Open
+        <li>Next to the <code>seedminer_launcher3.py</code> file, hold SHIFT and right click, then select <code>Open
             PowerShell Window here...</code> or <code>Open Command Prompt here...</code></li>
-        <li>Type <code>python seedminer_launcher.py update-db</code> into the new window
-            <ul>
-                <li>If you have Python 2, just do what i wrote</li>
-                <li>If you have Python 3, replace <code>seedminer_launcher.py</code> with
-                    <code>seedminer_launcher3.py</code> on every occasion.
-                </li>
-            </ul>
+        <li>Type <code>py -3 seedminer_launcher3.py update-db</code> into the new window.
         </li>
-        <li>Wait for it to finish, then type <code>python seedminer_launcher.py id0 [YOUR ID0 HERE]</code> - replace
+        <li>Wait for it to finish, then type <code>py -3 seedminer_launcher3.py id0 [YOUR ID0 HERE]</code> - replace
             <code>[YOUR ID0 HERE]</code> with your ID0 we acquired before.
         </li>
         <li>If it succeeded,
             <ul>
-                <li>And you have a graphics card, type <code>python seedminer_launcher.py gpu</code></li>
-                <li>And you <strong>don't</strong> have a graphics card, type <code>python seedminer_launcher.py
+                <li>And you have a graphics card, type <code>py -3 seedminer_launcher3.py gpu</code></li>
+                <li>And you <strong>don't</strong> have a graphics card, type <code>py -3 seedminer_launcher3.py
                     cpu</code><br/>
                     I repeat:
                     <div class="alert alert-danger">
