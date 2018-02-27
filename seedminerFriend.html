@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/3ds.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>Seedminer</title>
+</head>
+<body>
+
+<div class="alert alert-danger">
+    <strong>WARNING!</strong> This guide is <strong>not (yet) approved by the community.</strong> You may face issues
+    and this website is most likely temporary. Please do report any issues you may have or any other feedback for the
+    guide.
+</div>
+<div id="mainDiv">
+    <h1>Marenthyu's Guide to Custom Firmware using SeedMiner</h1>
+    <hr>
+    <div class="alert alert-danger">
+        <strong>WARNING!</strong> ALWAYS make sure you execute <strong>every single step.</strong> It exists for a
+        reason. I am not held responsible for your device bricking.
+    </div>
+    <h2>Using SeedMiner with a friend giving you your LFCS</h2>
+    <p>
+        You have a friend with Homebrew already, yay!<br/>
+        Before we continue, however:<br/>
+    <div class="alert alert-danger">
+        If you do <strong>not</strong> have a dedicated graphics card, this will take <strong>FOREVER</strong> - you are
+        better off <a href="seedminerHelp.html">asking someone else for help.</a>
+    </div>
+    <br/>
+    If you do have one, though, good! Please follow along:
+    <h3>Section One - movable_part1.sed</h3>
+    <ol>
+        <li>Add your friend to your friendslist on the 3DS</li>
+        <li>Let your friend add you to his Friend List on the 3DS</li>
+        <li>Tell your friend to <a href="https://github.com/zoogie/seedminer/releases/download/v2.1/RELEASE_v2.1.zip">download
+            SeedMiner</a> and install or run seedStarter on their 3DS<br/>
+            <div class="alert alert-info">
+                If your friend only has Userland homebrew, it may fail. Tell them to read the readme.txt in the
+                seedminer .zip, it has instructions for that case.
+            </div>
+        </li>
+        <li>Your friend presses B to dump their friends <code>movable_part1.sed</code>'s</li>
+        <li>Your friend powers off their 3DS</li>
+        <li>Your friend puts their SD Card into their PC</li>
+        <li>Your friend sends you your <code>movable_part1.sed</code>, which they will find in the
+            <code>seedstarter</code> directory on their 3DS.
+        </li>
+        <li>Rename it to movable_part1.sed if it is not yet named that.</li>
+        <li>Copy the file into a new folder.</li>
+    </ol>
+
+
+    <h3>Section Two - Checking Python</h3><br/>
+    <p>
+        Now that you have that file, we need to make sure you have python installed.
+    </p>
+    <ol>
+        <li>Open a command Prompt by typing <code>CMD</code> into the start menu search bar and pressing return</li>
+        <li>In the new black window, type <code>python --version</code>
+            <br/>
+            <ul>
+                <li>If it reports <code>Python Version 2.x.x</code>, you have Python 2.</li>
+                <li>If it reports <code>Python Version 3.x.x</code>, you have Python 3.</li>
+                <li>If it complains about an unknown command, try typing <code>C:\Python27\python.exe --version</code>
+                    <ul>
+                        <li>If that reports a version, use <code>C:\Python27\python.exe</code> instead of
+                            <code>python</code> from here on out (you have Python 2)
+                        </li>
+                        <li>Else, you do not have python Installed. Go to <a href="https://www.python.org/downloads/">python.org</a>
+                            and download and install any of the most recent python versions, then redo this part to
+                            confirm it worked.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Type <code>python -m pip install pycryptodomex</code>
+            <br/>
+            <ul>
+                <li>If it does not give an error, you are good to go.</li>
+                <li>If you <strong>do</strong> get an error, try launching the command prompt as administrator by
+                    right-clicking the entry in the windows search and selecting run as Administrator; then try again.
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <h3>Section Three - Downloading SeedMiner and adding your ID0</h3>
+    <br/>
+    <p>
+    Next, we will add your ID0 to your <code>movable_part1.sed</code>. Without it, the file is virtually useless.
+    </p>
+    <ol>
+        <li>Download the latest release of SeedMiner <a href="https://github.com/zoogie/seedminer/releases">from
+            here</a></li>
+        <li>Extract the zip file</li>
+        <li>Move your <code>movable_part1.sed</code> into the <code>seedminer</code> directory you just extracted, so
+            <code>seedminer_launcher.py</code> and <code>movable_part1.sed</code> are in the same directory.
+        </li>
+        <li>Next to the <code>seedminer_launcher.py</code> file, hold SHIFT and right click, then select <code>Open
+            PowerShell Window here...</code> or <code>Open Command Prompt here...</code></li>
+        <li>Type <code>python seedminer_launcher.py update-db</code> into the new window
+            <ul>
+                <li>If you have Python 2, just do what i wrote</li>
+                <li>If you have Python 3, replace <code>seedminer_launcher.py</code> with
+                    <code>seedminer_launcher3.py</code> on every occasion.
+                </li>
+            </ul>
+        </li>
+        <li>Wait for it to finish, then type <code>python seedminer_launcher.py id0 [YOUR ID0 HERE]</code> - replace
+            <code>[YOUR ID0 HERE]</code> with your ID0 we acquired before.
+        </li>
+        <li>If it succeeded,
+            <ul>
+                <li>And you have a graphics card, type <code>python seedminer_launcher.py gpu</code></li>
+                <li>And you <strong>don't</strong> have a graphics card, type <code>python seedminer_launcher.py
+                    cpu</code><br/>
+                    I repeat:
+                    <div class="alert alert-danger">
+                        If you do <strong>not</strong> have a dedicated graphics card, this will take
+                        <strong>FOREVER</strong> - you are better off <a href="seedminerHelp.html">asking someone else
+                        for help.</a>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            If it succeeded, it will now take anywhere from 1 minute to an hour, depending on your graphics card. (It
+            MAY take longer.)
+        </li>
+        <li>Wait.</li>
+        <li>If it finished, you will now have a movable.sed and a .bin file - feel free to share the .bin file on the
+            forum.
+            <ul>
+                <li>If the current offset exceeds about +-1000, you most likely did something wrong, but it is possible
+                    to have this bad of a hit every now and then, but it is better to make sure you did everything right
+                    at this point.
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <div class="alert alert-info">
+        Once you have your movable.sed <a href="DIS.html">continue with the DSiWare Injection Service</a>
+    </div>
+
+</div>
+
+</body>
+</html>

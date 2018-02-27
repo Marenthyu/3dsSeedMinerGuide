@@ -1,0 +1,17 @@
+#mainDiv, .alert {
+    margin: 1em;
+}
+div {
+    display: block;
+}
+body {
+    background-color: #1b1e21;
+    color: lightgray;
+}
+p{
+    text-align: justify;
+    width: 75%;
+}
+.alert {
+    display: inline-block;
+}

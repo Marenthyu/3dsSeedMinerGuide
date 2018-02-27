@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/3ds.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>Preparations</title>
+</head>
+<body>
+
+<div class="alert alert-danger">
+    <strong>WARNING!</strong> This guide is <strong>not (yet) approved by the community.</strong> You may face issues and this website is most likely temporary. Please do report any issues you may have or any other feedback for the guide.
+</div>
+<div id="mainDiv">
+    <h1>Marenthyu's Guide to Custom Firmware using SeedMiner</h1>
+    <hr>
+    <div class="alert alert-danger">
+        <strong>WARNING!</strong> ALWAYS make sure you execute <strong>every single step.</strong> It exists for a reason. I am not held responsible for your device bricking.
+    </div>
+    <h2>Preparations</h2>
+    <div>
+        <h3>Section One - Sanity check</h3>
+        <p>
+            First things first.
+            <br/>
+            We will now check if you had CFW installed before.
+        </p>
+        <ol>
+            <li>Power off your Nintendo 3DS</li>
+            <li>Hold the <code>SELECT</code> Button and turn on your 3DS. Don't let go until you see the Home Menu or Luma</li>
+            <li>You should see the Home Menu.<br/><div class="alert alert-danger">
+                <strong>If you see the Luma Configuration screen, STOP HERE.</strong>
+                <br/>This means you already have or had CFW installed. Please ask on the <a href="https://discord.gg/C29hYvh">Homebrew Discord</a> for help, clearly stating your issue.
+            </div></li>
+        </ol>
+    </div>
+    <div>
+        <h3>Section Two - DSiWare Game</h3>
+        <p>
+            No CFW existing? Good!<br/>Let's get a game.</p>
+            <ol>
+                <li>Check <a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection-list)">this website</a> if you already have any of the listed Games. If you do, great, continue on with <a href="#section3">Section Three - Dumping Your Game</a>
+                <ul><li>Additionally, it also works with any of the following games:</li>
+                    <li>“Fieldrunners”</li>
+                    <li>
+                    “Legends of Exidia”</li>
+                    <li>
+                    “Guitar Rock Tour”</li>
+                    <li>
+                        “The Legend of Zelda: Four Swords”</li></ul></li>
+                <li>You need to legitimately own one of the listed games on the device you want to install CFW on. <strong>Pirated copies won't work.</strong><br/>
+                </li>
+                <li>Open the eShop (update your device if necessary)</li>
+                <li>Open the Menu</li>
+                <li>Go to Settings and more</li>
+                <li>Go to Scan QR Code</li>
+                <li>Scan any QR Code from <a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection-list)">the website linked above</a>, making sure it is a game form your region.
+                <br/>
+                I recommend SUDOKU by EA, as it is just 2$ and the game this exploit was originally discovered in</li>
+                <li>Buy the game</li>
+                <li>Download the game</li>
+
+            </ol>
+
+    </div>
+    <div>
+        <a name="section3"></a>
+        <h3>Section Three - Dumping Your Game</h3>
+        <p>Got a game? Let's grab it.</p>
+        <ol>
+            <li>Open System Settings on your 3DS</li>
+            <li>Open Data Management (Green option in the bottom right)</li>
+            <li>Open DSi Ware</li>
+            <li>Under System Memory, tap your game</li>
+            <li>Tap Copy</li>
+            <li>You will be asked if you are sure to copy it as it will make the game unplayable - Tap Yes</li>
+            <li>Exit out of System Settings and Power off your 3DS</li>
+        </ol>
+
+    </div>
+    <div>
+        <a name="section4"></a>
+        <h3>Section Four - Finding your correct ID0</h3>
+        <p>
+            We will need your ID0, which is a unique String to identify your console.<br/>
+            To get it, please do the following:
+        </p>
+            <ol>
+                <li>Power off your 3DS if you haven't already</li>
+                <li>Put your SD Card into your PC</li>
+                <li>Open the SD Card's Contents</li>
+                <li>Open the Folder Named <code>Nintendo 3DS</code></li>
+                <li>You will now find one or multiple folders with 32-character-long names.<br/>
+                    <div class="alert alert-success">
+                        If you only have one, that's good! Continue with step 15
+                    </div>
+                </li>
+                <li>Navigate one folder up so you can see the <code>Nintendo 3DS</code> folder again</li>
+                <li>Rename your <code>Nintendo 3DS</code> folder to <code>Nintendo 3DSORIGINALDONOTDELETEME</code> by right-clicking it and selecting Rename...</li>
+                <li>Put the SD Card back into your 3DS</li>
+                <li>Power on your Nintendo 3DS</li>
+                <li><strong>Wait</strong> for it to generate its data on your SD Card</li>
+                <li>Power off your 3DS</li>
+                <li>Insert the SD Card into your PC</li>
+                <li>Open the SD Card's Contents</li>
+                <li>Open the Folder Named <code>Nintendo 3DS</code></li>
+                <li>You should now see one Folder with a 32-character-long name. Write its name down, preferably copy it somewhere. (Where doesn't matter as long as you remember it.)<br/>
+                    <div class="alert alert-info">This name of the folder is your <strong>ID0</strong> - There is another one inside of it, but you can safely ignore it for now.</div></li>
+                <li>If you did <strong>NOT</strong> skip from step 5 to step 15, delete the <code>Nintendo 3DS</code> folder and rename the <code>Nintendo 3DSORIGINALDONOTDELETEME</code> folder back to <code>Nintendo 3DS</code></li>
+
+            </ol>
+        <p>
+            Remember your ID0. You will need it later.
+        </p>
+    </div>
+    <div>
+        <a name="section5"></a>
+        <h3>Section Five - Copying your dsiware.bin file</h3>
+        <p>
+            You got your ID0 and bought the game which has been dumped to your SD Card. You will now need to find said dump.</p>
+            <ol>
+                <li>Power off your 3DS if you haven't already</li>
+                <li>Put your SD Card into your PC</li>
+                <li>Open the SD Card's Contents</li>
+                <li>Open the Folder Named <code>Nintendo 3DS</code></li>
+                <li>Open the Folder Named like your ID0</li>
+                <li>Open its sub-folder, it has a 32-character-long name again</li>
+                <li>Open the Folder Named <code>Nintendo DSiWare</code></li>
+                <li>You will find one or more .bin files. If you have multiples, go back to the website from Section Two and find the ID of the game you bought.<br/>
+                    Copy the .bin file somewhere you can remember. For example, your desktop. To do so, click the file and press CTRL and C, then go to your Desktop and press CTRL and V.
+                </li>
+            </ol>
+
+        <p>
+            If you have followed everything correctly, you now know your ID0 and have your game dumped as a .bin file.<br/>
+        </p>
+        <div class="alert alert-info">
+            You are now good to continue with <a href="seedminer.html">seedminer itself.</a> (that's a clickable link. click it.)
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
