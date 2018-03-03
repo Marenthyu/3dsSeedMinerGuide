@@ -15,93 +15,131 @@
 <body>
 
 <div class="alert alert-danger">
-    <strong>WARNING!</strong> This guide is <strong>not (yet) approved by the community.</strong> You may face issues and this website is most likely temporary. Please do report any issues you may have or any other feedback for the guide.
+    <strong>WARNING!</strong> This guide is <strong>not (yet) approved by the community.</strong> You may face issues
+    and this website is most likely temporary. Please do report any issues you may have or any other feedback for the
+    guide.
 </div>
 <div id="mainDiv">
     <h1>Marenthyu's Guide to Custom Firmware using SeedMiner</h1>
     <hr>
     <div class="alert alert-danger">
-        <strong>WARNING!</strong> ALWAYS make sure you execute <strong>every single step.</strong> It exists for a reason. I am not held responsible for your device bricking.
+        <strong>WARNING!</strong> ALWAYS make sure you execute <strong>every single step.</strong> It exists for a
+        reason. I am not held responsible for your device bricking.
     </div>
     <h2>Getting your Game patched</h2>
     <p>
         Congratulations on acquiring your movable.sed and dsiware.bin!<br/>
-        You will now patch your game to allow for the core exploit to be executed, which will allow you to install CFW.<br/>
+        You will now patch your game to allow for the core exploit to be executed, which will allow you to install
+        CFW.<br/>
         Hold both files ready, you will need them in a moment.<br/>
-        If you do not yet have a movable.sed or your game's .bin file, you skipped something. Go back to <a href="index.html">the beginning.</a>
+        If you do not yet have a movable.sed or your game's .bin file, you skipped something. Go back to <a
+            href="index.html">the beginning.</a>
     </p>
+    <div class="alert alert-danger">
+        <strong>UNDER DEVELOPMENT</strong> This section of the guide is under development and will change in the future.
+        Currently, only instructions for the DIS are available, instructions on manually using <a
+            href="https://github.com/zoogie/TADpole">TADpole</a> or <a
+            href="https://github.com/knight-ryu12/Seedplanter/">SeedPlanter</a> will follow soon™
+    </div>
     <h3>Section One - Using the DIS</h3>
     <p>
-        Luckily for you, someone recently made a Service to make the next step a lot easier and possible without someone else sharing their private files with you.<br/>
-        This service is the <a href="https://gbatemp.net/threads/dis-dsihax-injection-service.496072"><strong>DSiWare Injection Service</strong></a>, which we will now use to patch your game. If the site is down for whatever reason, you may still be able to use TADPole and inject the file yourself, use google if that's the case.
+        Luckily for you, someone recently made a Service to make the next step a lot easier and possible without someone
+        else sharing their private files with you.<br/>
+        This service is the <a href="https://gbatemp.net/threads/dis-dsihax-injection-service.496072"><strong>DSiWare
+        Injection Service</strong></a>, which we will now use to patch your game. If the site is down for whatever
+        reason, you may still be able to use TADPole and inject the file yourself, use google if that's the case.
     </p>
     <ol>
-            <li>Open <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector/">this website</a> </li>
-            <li>Click <code>Build with Parameters</code> on the left side</li>
-            <li>Enter your name in the Username Field - <strong>Any name will work</strong>, just dont make it too short or include spaces.</li>
-            <li>Select the region you purchased your DSiWare Game in</li>
-            <li>Upload the .bin file you previously got and saved to your Desktop in the <code>DsiBin</code> field</li>
-            <li>Upload your <code>movable.sed</code> in the <code>MovableSed</code> field</li>
-            <li>Click Build</li>
-            <li>Wait a few seconds</li>
-            <li>Click the new Build that popped up on the left side. You should see a file downloadable with your name at the end</li>
-            <li>Download this file</li>
-            <li>Rename it by removing the <code>.patched_yourname</code> part, so it ends in .bin - for example, it should be named <code>4B513956.bin</code> now</li>
-        </ol>
+        <li>Open <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector/">this website</a></li>
+        <li>Click <code>Build with Parameters</code> on the left side</li>
+        <li>Enter your name in the Username Field - <strong>Any name will work</strong>, just dont make it too short or
+            include spaces.
+        </li>
+        <li>Select the region you purchased your DSiWare Game in</li>
+        <li>Upload the .bin file you previously got and saved to your Desktop in the <code>DsiBin</code> field</li>
+        <li>Upload your <code>movable.sed</code> in the <code>MovableSed</code> field</li>
+        <li>Click Build</li>
+        <li>Wait a few seconds</li>
+        <li>Click the new Build that popped up on the left side. You should see a file downloadable with your name at
+            the end
+        </li>
+        <li>Download this file</li>
+        <li>Rename it by removing the <code>.patched_yourname</code> part, so it ends in .bin - for example, it should
+            be named <code>4B513956.bin</code> now
+        </li>
+    </ol>
 
     <h3>Section Two - Re-Import the Game</h3>
     <p>
         You should now have a fully patched .bin file - great!<br/>
         We will now Re-Import the game to your 3DS's System Memory.
     </p>
-        <ol>
-            <li>Power off your 3DS if you haven't already</li>
-            <li>Put your SD Card into your PC</li>
-            <li>Open the SD Card's Contents</li>
-            <li>Open the Folder Named <code>Nintendo 3DS</code></li>
-            <li>Open the Folder Named like your ID0</li>
-            <li>Open its sub-folder, it has a 32-character-long name again</li>
-            <li>Open the Folder Named <code>Nintendo DSiWare</code></li>
-            <li>Copy the patched .bin file you downloaded and renamed into this folder, <strong>overwriting</strong> the file that is already there.</li>
-            <li>Put the SD Card back into your 3DS</li>
-            <li>Start your 3DS</li>
-            <li>Open System Settings</li>
-            <li>Open Data Management (Green option in the bottom right)</li>
-            <li>Open DSi Ware</li>
-            <li>Tap SD Card</li>
-            <li>Tap Your Game</li>
-            <li>Tap Copy</li>
-            <li>you will be asked if you want to override the already existing copy - Tap Yes</li>
-            <li>Wait for it to copy</li>
-            <li>Exist System Settings</li>
-            <li>Start your Game.<br/>
-                You should be greeted by a white screen complaining that it could not load a file. <strong>this is the intended result.</strong><br/>
-                <strong>NOTE:</strong> if you used SUDOKU, you may need to tap the touchscreen so the Game loads the modified save file
-                <div class="alert alert-danger">
-                    If you just get the game or sudoku, you have done something wrong and should start back at <strong>Section One</strong> above.
-                </div>
-            </li>
-        </ol>
+    <ol>
+        <li>Power off your 3DS if you haven't already</li>
+        <li>Put your SD Card into your PC</li>
+        <li>Open the SD Card's Contents</li>
+        <li>Open the Folder Named <code>Nintendo 3DS</code></li>
+        <li>Open the Folder Named like your ID0</li>
+        <li>Open its sub-folder, it has a 32-character-long name again</li>
+        <li>Open the Folder Named <code>Nintendo DSiWare</code></li>
+        <li>Copy the patched .bin file you downloaded and renamed into this folder, <strong>overwriting</strong> the
+            file that is already there.
+        </li>
+        <li>Put the SD Card back into your 3DS</li>
+        <li>Start your 3DS</li>
+        <li>Open System Settings</li>
+        <li>Open Data Management (Green option in the bottom right)</li>
+        <li>Open DSi Ware</li>
+        <li>Tap SD Card</li>
+        <li>Tap Your Game</li>
+        <li>Tap Copy</li>
+        <li>you will be asked if you want to override the already existing copy - Tap Yes</li>
+        <li>Wait for it to copy</li>
+        <li>Exist System Settings</li>
+        <li>Start your Game.<br/>
+            You should be greeted by a white screen complaining that it could not load a file. <strong>this is the
+                intended result.</strong><br/>
+            <strong>NOTE:</strong> if you used SUDOKU, you may need to tap the touchscreen so the Game loads the
+            modified save file
+            <div class="alert alert-danger">
+                If you just get the game or sudoku, you have done something wrong and should start back at <strong>Section
+                One</strong> above.
+            </div>
+        </li>
+    </ol>
 
     <h3>Section Three - Preparing your SD Card</h3>
     <p>
-        We now have an entry-point Exploit. Awesome! We will now start downloading some things to install a few tools and the actual Custom Firmware.
+        We now have an entry-point Exploit. Awesome! We will now start downloading some things to install a few tools
+        and the actual Custom Firmware.
     </p>
-        <ol>
-            <li>Download the <a href="https://github.com/AuroraWright/Luma3DS/releases/latest"> latest Version of Luma3DS (Currently 9.0)</a></li>
-            <li>Download the <a href="https://github.com/zoogie/b9sTool/releases">latest Version of this fork of b9sTool</a></li>
-            <li>Download the <a href="https://github.com/SciresM/boot9strap/releases">latest Version of Boot9Strap</a> (NOT the devkit, NOT the ntr version.)</li>
-            <li>Download the <a href="https://github.com/fincs/new-hbmenu/releases"> latest Version of the Homebrew Menu</a></li>
-            <li>Copy the <code>boot.firm</code> from the Luma3DS 7z archive to the root of your SD Card</li>
-            <li>Copy the <code>boot.3dsx</code> (Homebrew Menu) to the root of your SD Card</li>
-            <li>Copy the <code>boot.nds</code> from the b9stool archive to the root of your SD Card</li>
-            <li>Copy the <code>boot9strap.firm</code> from the <code>boot9strap.zip</code> file to the <code>/boot9strap/</code> folder on your SD Card. (Create it if it does not exist)</li>
-        </ol>
+    <ol>
+        <li>Download the <a href="https://github.com/AuroraWright/Luma3DS/releases/latest"> latest Version of Luma3DS
+            (Currently 9.0)</a></li>
+        <li>Download the <a href="https://github.com/zoogie/b9sTool/releases">latest Version of this fork of b9sTool</a>
+        </li>
+        <li>Download the <a href="https://github.com/SciresM/boot9strap/releases">latest Version of Boot9Strap</a> (NOT
+            the devkit, NOT the ntr version.)
+        </li>
+        <li>Download the <a href="https://github.com/fincs/new-hbmenu/releases"> latest Version of the Homebrew Menu</a>
+        </li>
+        <li>Copy the <code>boot.firm</code> from the Luma3DS 7z archive to the root of your SD Card</li>
+        <li>Copy the <code>boot.3dsx</code> (Homebrew Menu) to the root of your SD Card</li>
+        <li>Copy the <code>boot.nds</code> from the b9stool archive to the root of your SD Card</li>
+        <li>Copy the <code>boot9strap.firm</code> from the <code>boot9strap.zip</code> file to the
+            <code>/boot9strap/</code> folder on your SD Card. (Create it if it does not exist)
+        </li>
+    </ol>
     <div class="alert alert-success">
-        <strong>Congrabblulations!</strong> You now have a working exploit entry point and the required files to get everything up and running!<br/>
-        You can now continue with <strong>SECTION VI</strong> in the following guide - <strong>NOT SECTION I</strong>!<br/>
-        <a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection).html">Continue with SECTION VI here</a><br/>
-        If you used any of the 4 additionally listed games on the first page, <a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-save-injection).html">continue with Section VI here instead.</a>
+        <strong>Congrabblulations!</strong> You now have a working exploit entry point and the required files to get
+        everything up and running!<br/>
+        You can now continue with <strong>SECTION VI</strong> in the following guide - <strong>NOT SECTION
+        I</strong>!<br/>
+        <a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection).html">Continue with SECTION VI
+            here</a><br/>
+        If you used any of the 4 additionally listed games on the first page, <a
+            href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-save-injection).html">continue with Section VI
+        here instead.</a>
     </div>
 
 </div>

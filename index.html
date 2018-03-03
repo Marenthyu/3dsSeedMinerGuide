@@ -38,11 +38,54 @@
     </div>
 
     <p>
-        If you <strong>do have any of the above</strong> and or <strong>are not on 11.4 through 11.6</strong>, please head over to <a
+        If you <strong>do have any of the above</strong> and or <strong>are not on 11.4 through 11.6</strong>, please
+        head over to <a
             href="https://3ds.hacks.guide">3ds.hacks.guide</a>
         and follow it, especially if you are on an earlier Version, as there are WAY faster methods for older versions
         which are extremely well documented.
     </p>
+    <p>
+        You may have come here not fully knowing what SeedMiner is and how it works. Click the following button to see
+        more info:
+        <br/>
+        <a class="btn btn-primary" data-toggle="collapse" href="#seedMinerExplain" role="button" aria-expanded="false"
+           aria-controls="collapseExample">More...</a>
+    </p>
+    <div class="collapse" id="seedMinerExplain">
+        <div class="card card-body">
+
+            <h3>What is SeedMiner?</h3>
+            <p>
+                SeedMiner is a tool that allows you to brute-force a console-unique Key. It utilises your Graphics
+                Card's
+                amazing processing power to try out all possible combinations, with one of them being guaranteed to
+                work.
+                <br/>
+                Using this key (or "seed"), it is possible to then sign a DSiWare Game which has been modified to run an
+                exploit on your Device when launching it.
+            </p>
+            <p>
+                This all is only possible thanks to a flaw in the key calculation, which makes it (almost) predictable -
+                more
+                information on the nitty-gritty details can be found on
+                <a href="https://zoogie.github.io/web/34%E2%85%95c3/#/">zoogie's explanation slide here</a>, but long
+                story short:
+                using your LCFS (<strong>L</strong>ocal <strong>F</strong>riend-<strong>C</strong>ode <strong>S</strong>eed),
+                it is possible to predict your <code>movable.sed</code> key with an accuracy of about +-4000, which we
+                then can "easily" brute-force.
+            </p>
+            <p>
+                In addition to getting everything you will need to get your <code>movable.sed</code>, this guide will
+                also
+                recommend you a few tools which you can then use to actually inject your modified Game/Save onto your
+                console.
+                <br/>
+                In most cases, you will be able to use an automated service, but if that fails you, you may need to try
+                one of the other tools available to you.
+            </p>
+        </div>
+    </div>
+    <br/>
     <p>
         This guide will, at all times, attempt to be as thorough as possible, but i can not guarantee it to be
         understandable 100% of the time. If you have a question and/or don't understand something, don't hesitate to
