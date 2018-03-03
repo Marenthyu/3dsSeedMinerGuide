@@ -1,5 +1,7 @@
 #mainDiv, .alert {
     margin: 1em;
+    margin-left: 2em;
+    width: 80%;
 }
 div {
     display: block;
